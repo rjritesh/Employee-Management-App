@@ -1,8 +1,9 @@
 import { FiLogOut, FiCheckCircle, FiClock, FiXCircle, FiPlus } from "react-icons/fi";
+import Header from "../Header";
 
 
 const EmployeeDashboard = () => {
-  const userName = "Ritesh"; // Dummy name for greeting
+  // Dummy name for greeting
 
   const tasks = [
     { id: 1, title: "Prepare project report", status: "New", date: "24 Oct 2025" },
@@ -37,12 +38,7 @@ const EmployeeDashboard = () => {
     <div className="min-h-screen bg-zinc-900 text-white p-6 md:p-10" style={{ fontFamily: "Montserrat, sans-serif" }}>
 
       {/* Header Greeting + Logout */}
-      <div className="flex justify-between items-center mb-10">
-        <h1 className="text-3xl font-bold tracking-wide">Hello, {userName}</h1>
-        <button className="flex items-center gap-2 bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg transition font-medium">
-          <FiLogOut /> Logout
-        </button>
-      </div>
+      <Header></Header>
 
       {/* Task Summary Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
